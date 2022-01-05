@@ -12,7 +12,7 @@ dest_schema = {
 dest_table = bigquery.TableReference(
     projectId="york-cdf-start",
     datasetId="aganipineni_proj_1",
-    tableId="usd_customers"
+    tableId="usd_customers_1"
 )
 
 
