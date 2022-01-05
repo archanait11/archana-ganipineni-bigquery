@@ -25,7 +25,7 @@ def run():
         job_name='archana-ganipineni-bq1',
         save_main_session=True
     )
-    with beam.Pipeline(options=pipeline_options) as p:
+    with beam.Pipeline(runner='DataflowRunner', options=pipeline_options) as p:
         data_from_usd = p | "Read data from usd" >> beam.io.ReadFromBigQuery(
             query="select first_name,last_name "
                   "FROM york-cdf-start.aganipineni_proj_1.usd_order_payment_history LIMIT 7", project="york-cdf-start",
